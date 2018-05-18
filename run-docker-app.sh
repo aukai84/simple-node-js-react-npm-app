@@ -1,4 +1,4 @@
-#!/user/bin/env sh
+#!/bin/bash
 
 docker run react-app \
     --rm \
