@@ -1,8 +1,8 @@
 FROM node:8.11.1-alpine
 
 # update alpine image
-RUN apk upgrade -y
-RUN apk update && apk add -y \
+RUN apk upgrade 
+RUN apk update && apk add \
         autoconf \
         automake \
         libtool \
