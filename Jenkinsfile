@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    environment {
-        CI = 'true'
-    }
     stages {
         stage('Build') { 
             steps {
@@ -17,7 +14,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh 'docker build -t react-app .'
-                sh 'sudo ./run-docker-app.sh'
+                sh './run-docker-app.sh'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
                 sh 'docker kill'
             }
