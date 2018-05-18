@@ -1,5 +1,7 @@
 FROM node:8.11.1-alpine
 
+USER root
+
 # update alpine image
 RUN apk upgrade 
 
