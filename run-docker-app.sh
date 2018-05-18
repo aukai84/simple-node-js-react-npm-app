@@ -1,3 +1,5 @@
+#!/user/bin/env sh
+
 docker run react-app \
     --rm \
     -u root \
