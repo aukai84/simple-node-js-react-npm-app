@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        node {
-            label 'node-jenkins-build'
-        }
-    }
+    agent any
     environment {
         CI = 'true'
     }
