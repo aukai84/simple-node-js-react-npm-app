@@ -3,14 +3,8 @@ FROM node:8.11.1-alpine
 # update alpine image
 RUN apk upgrade 
 RUN apk update && apk add \
-        autoconf \
-        automake \
-        libtool \
-        nasm \
         make \
-        pkg-config \
         git \
-        apt-utils 
 
 #Create app directory
 RUN mkdir -p /usr/src/app
