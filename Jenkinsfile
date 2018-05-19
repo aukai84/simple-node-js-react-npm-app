@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'sudo chmod 0755 *.sh'
+                sh 'chmod 0755 *.sh'
                 sh './run-docker-app.sh'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
                 sh 'docker kill'
