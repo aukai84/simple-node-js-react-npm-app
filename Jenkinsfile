@@ -6,7 +6,6 @@ pipeline {
         stage('Build') { 
             steps {
                 sh 'docker build -t react-app .'   
-                sh 'npm install'
                 sh 'chmod 0755 *.sh'
             }
         }
@@ -17,7 +16,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'npm start'
+                sh './run-docker-app.sh'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
                 sh 'docker kill'
             }
