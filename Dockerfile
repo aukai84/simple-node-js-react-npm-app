@@ -30,4 +30,4 @@ COPY . /usr/src/app
 EXPOSE 3000
 
 #rum pm2 instance
-CMD pm2 start npm --start
+CMD npm start
