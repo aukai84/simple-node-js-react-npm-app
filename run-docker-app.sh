@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/usr/bin/env sh
 docker run \
     --rm \
     -u root \
