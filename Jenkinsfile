@@ -6,6 +6,7 @@ pipeline {
         stage('Build') { 
             steps {
                 sh 'docker build -t react-app .'   
+                sh 'npm install'
                 sh 'chmod 0755 *.sh'
             }
         }
