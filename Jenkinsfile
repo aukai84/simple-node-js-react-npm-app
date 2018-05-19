@@ -6,6 +6,7 @@ pipeline {
         stage('Build') { 
             steps {
                 sh 'docker build -t react-app .'   
+                sh 'chmod 0755 *.sh'
             }
         }
         stage('Test') {
@@ -15,7 +16,6 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'chmod 0755 *.sh'
                 sh './run-docker-app.sh'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
                 sh 'docker kill'
