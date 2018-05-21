@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh './run-docker-app.sh'
+                sh 'docker-compose up'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
                 sh 'docker kill'
             }
