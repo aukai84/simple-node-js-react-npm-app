@@ -12,6 +12,8 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'this is your test step'
+                sh 'echo $PATH'
+                echo 'this is your path'
             }
         }
         stage('Deploy') {
