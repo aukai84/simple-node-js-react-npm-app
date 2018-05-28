@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'docker build -t react-app .'   
+                sh 'docker build -t new-react-app .'   
                 sh 'chmod 0755 *.sh'
             }
         }
